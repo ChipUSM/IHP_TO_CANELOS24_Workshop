@@ -158,7 +158,7 @@ spi spi_inst(
     chip_internal[7:0]
 );
 
-(* keep *)
-analog_blockage analog_blockage_I ();
+//(* keep *)
+//analog_blockage analog_blockage_I ();
 
 endmodule

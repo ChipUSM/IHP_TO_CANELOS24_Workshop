@@ -10,7 +10,7 @@ export VERILOG_FILES = $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/top_1mm2.v \
 export SDC_FILE      = $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/constraint.sdc
 
 export DIE_AREA = 0 0 1400 1400
-export CORE_AREA = 400 400 1000 1000
+export CORE_AREA = 400 400 1000 738
 export FOOTPRINT_TCL = $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/pad.tcl
 export PDN_TCL = $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/pdn.tcl
 
@@ -40,5 +40,5 @@ export CDL_FILE = \
 
 export ADDITIONAL_LEFS += \
         $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/macros/analog_blockage/lef/analog_blockage.lef
-export MACRO_PLACEMENT = \
+#export MACRO_PLACEMENT = \
         $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/macro_placement.cfg
