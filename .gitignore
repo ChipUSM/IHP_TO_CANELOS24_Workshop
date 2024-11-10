@@ -1,0 +1,14 @@
+design_data/orfs/logs/
+design_data/orfs/objects/
+design_data/orfs/reports/
+design_data/orfs/results/**/*.odb
+design_data/orfs/results/**/*.sdc
+design_data/orfs/results/**/*.def
+design_data/orfs/results/**/*.spef
+design_data/orfs/results/**/*.v
+design_data/orfs/results/**/*.rtlil
+design_data/orfs/results/ihp-sg13g2/top_1mm2/base/*.json
+design_data/orfs/results/ihp-sg13g2/top_1mm2/base/*.guide
+design_data/orfs/results/ihp-sg13g2/top_1mm2/base/*.map
+design_data/orfs/results/ihp-sg13g2/top_1mm2/base/6_1_merged.gds
+design_data/orfs/results/ihp-sg13g2/top_1mm2/base/*.txt

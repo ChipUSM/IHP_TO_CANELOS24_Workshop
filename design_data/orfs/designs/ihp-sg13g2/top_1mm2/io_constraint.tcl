@@ -1,0 +1,2 @@
+puts "io constraints"
+set_io_pin_constraint -pin_names {chip_internal[0] chip_internal[1] chip_internal[2] chip_internal[3] chip_internal[4] chip_internal[5] chip_internal[6] chip_internal[7]} -region top:*

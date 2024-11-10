@@ -1,0 +1,21 @@
+VERSION 5.8 ;
+
+MACRO analog_blockage
+  CLASS BLOCK ;
+  ORIGIN 0 0 ;
+  FOREIGN analog_blockage 0 0 ;
+  SIZE 585.0 BY 262.0 ;
+
+  OBS
+    LAYER TopMetal2 ;
+      RECT 0 0 585.0 262.0 ;
+  END
+  OBS
+    LAYER TopMetal1 ;
+      RECT 0 0 585.0 262.0 ;
+  END
+  OBS
+    LAYER Metal5 ;
+      RECT 0 0 585.0 262.0 ;
+  END
+END analog_blockage
