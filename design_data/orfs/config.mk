@@ -12,6 +12,8 @@ export LIB_FILES = $(PDK_ROOT)/$(PDK)/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell
 export GDS_FILES = $(PDK_ROOT)/$(PDK)/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds \
 	                  $(ADDITIONAL_GDS)
 
+#export GDS_LAYER_MAP = $(PDK_ROOT)/$(PDK)/libs.tech/klayout/tech/sg13g2.map
+
 # Dont use cells to ease congestion
 # Specify at least one filler cell if none
 
@@ -91,7 +93,7 @@ export MAX_ROUTING_LAYER 		?= Metal5
 export FASTROUTE_TCL ?= $(PLATFORM_DIR)/fastroute.tcl
 
 # KLayout technology file
-export KLAYOUT_TECH_FILE =  $(PLATFORM_DIR)/sg13g2.lyt
+export KLAYOUT_TECH_FILE =  $(PDK_ROOT)/$(PDK)/libs.tech/klayout/tech/sg13g2.lyt
 #
 # Rules for metal fill
 export FILL_CONFIG = $(PLATFORM_DIR)/fill.json
