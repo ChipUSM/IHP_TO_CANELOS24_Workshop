@@ -2,9 +2,8 @@ export DESIGN_NICKNAME = top_1mm2
 export DESIGN_NAME = top_1mm2
 export PLATFORM    = ihp-sg13g2
 
-export VERILOG_FILES = $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/top_1mm2.v \
-                        $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/spi.v \
-                        $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/analog_blockage.v
+export VERILOG_FILES =  $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/*.v \
+
 
 
 export SDC_FILE      = $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/constraint.sdc

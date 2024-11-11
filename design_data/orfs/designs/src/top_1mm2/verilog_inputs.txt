@@ -1,44 +1,5 @@
-sg13g2_IOPadIn sg13g2_chip_in_0 (
-      .p2c(chip_in[0]),
-      .pad({chip_in_PAD[0]})
-);
-sg13g2_IOPadIn sg13g2_chip_in_1 (
-      .p2c(chip_in[1]),
-      .pad({chip_in_PAD[1]})
-);
-sg13g2_IOPadIn sg13g2_chip_in_2 (
-      .p2c(chip_in[2]),
-      .pad({chip_in_PAD[2]})
-);
-sg13g2_IOPadIn sg13g2_chip_in_3 (
-      .p2c(chip_in[3]),
-      .pad({chip_in_PAD[3]})
-);
-sg13g2_IOPadIn sg13g2_chip_in_4 (
-      .p2c(chip_in[4]),
-      .pad({chip_in_PAD[4]})
-);
-sg13g2_IOPadIn sg13g2_chip_in_5 (
-      .p2c(chip_in[5]),
-      .pad({chip_in_PAD[5]})
-);
-sg13g2_IOPadIn sg13g2_chip_in_6 (
-      .p2c(chip_in[6]),
-      .pad({chip_in_PAD[6]})
-);
-sg13g2_IOPadIn sg13g2_chip_in_7 (
-      .p2c(chip_in[7]),
-      .pad({chip_in_PAD[7]})
-);
-sg13g2_IOPadIn sg13g2_chip_in_8 (
-      .p2c(chip_in[8]),
-      .pad({chip_in_PAD[8]})
-);
-sg13g2_IOPadIn sg13g2_chip_in_9 (
-      .p2c(chip_in[9]),
-      .pad({chip_in_PAD[9]})
-);
-sg13g2_IOPadIn sg13g2_chip_in_10 (
-      .p2c(chip_in[10]),
-      .pad({chip_in_PAD[10]})
-);
+ sg13g2_IOPadOut4mA sg13g2_chip_out_0 (
+      .c2p(chip_out[0]),
+      .pad(chip_out_PAD[0])
+  );
+

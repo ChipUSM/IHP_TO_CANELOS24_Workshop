@@ -47,6 +47,15 @@ place_pin -pin_name chip_internal[5] -layer Metal5 -location {510 738}
 place_pin -pin_name chip_internal[6] -layer Metal5 -location {520 738}
 place_pin -pin_name chip_internal[7] -layer Metal5 -location {530 738}
 
+place_pin -pin_name chip_internal[8] -layer Metal5 -location {540 738}
+place_pin -pin_name chip_internal[9] -layer Metal5 -location {550 738}
+place_pin -pin_name chip_internal[10] -layer Metal5 -location {560 738}
+place_pin -pin_name chip_internal[11] -layer Metal5 -location {570 738}
+place_pin -pin_name chip_internal[12] -layer Metal5 -location {580 738}
+place_pin -pin_name chip_internal[13] -layer Metal5 -location {590 738}
+place_pin -pin_name chip_internal[14] -layer Metal5 -location {600 738}
+place_pin -pin_name chip_internal[15] -layer Metal5 -location {610 738}
+
 make_fake_io_site -name IOLibSite -width 1 -height $IO_LENGTH
 make_fake_io_site -name IOLibCSite -width $IO_LENGTH -height $IO_LENGTH
 
@@ -70,7 +79,7 @@ place_pad -row IO_SOUTH -location [calc_horizontal_pad_location  6] {sg13g2_chip
 place_pad -row IO_EAST -location [calc_vertical_pad_location  0] {sg13g2_chip_in_5}
 place_pad -row IO_EAST -location [calc_vertical_pad_location  1] {sg13g2_chip_in_6}
 place_pad -row IO_EAST -location [calc_vertical_pad_location  2] {sg13g2_chip_in_7} 
-place_pad -row IO_EAST -location [calc_vertical_pad_location  3] {sg13g2_chip_in_8}
+place_pad -row IO_EAST -location [calc_vertical_pad_location  3] {sg13g2_IOPadVss_1} -master sg13g2_IOPadVss
 place_pad -row IO_EAST -location [calc_vertical_pad_location  4] {sg13g2_chip_analog_0} 
 place_pad -row IO_EAST -location [calc_vertical_pad_location  5] {sg13g2_chip_analog_1}
 place_pad -row IO_EAST -location [calc_vertical_pad_location  6] {sg13g2_chip_analog_2}
@@ -81,10 +90,10 @@ place_pad -row IO_NORTH -location [calc_horizontal_pad_location  2] {sg13g2_chip
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location  3] {sg13g2_chip_analog_6}
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location  4] {sg13g2_chip_analog_7}
 place_pad -row IO_NORTH -location [calc_horizontal_pad_location  5] {sg13g2_chip_analog_8}
-place_pad -row IO_NORTH -location [calc_horizontal_pad_location  6] {sg13g2_chip_analog_9}
+place_pad -row IO_NORTH -location [calc_horizontal_pad_location  6] {sg13g2_chip_analog_9} 
 
-place_pad -row IO_WEST -location [calc_vertical_pad_location  0] {sg13g2_chip_in_9}
-place_pad -row IO_WEST -location [calc_vertical_pad_location  1] {sg13g2_chip_in_10}
+place_pad -row IO_WEST -location [calc_vertical_pad_location  0] {sg13g2_IOPadVdd_1} -master sg13g2_IOPadVdd 
+place_pad -row IO_WEST -location [calc_vertical_pad_location  1] {sg13g2_chip_out_0}
 place_pad -row IO_WEST -location [calc_vertical_pad_location  2] {sg13g2_rst_n} 
 place_pad -row IO_WEST -location [calc_vertical_pad_location  3] {sg13g2_clk} 
 place_pad -row IO_WEST -location [calc_vertical_pad_location  4] {sg13g2_chip_analog_10}

@@ -1,12 +1,14 @@
 module top_1mm2 (
-    inout [10:0] chip_in_PAD,
+    inout [7:0] chip_in_PAD,
     inout [12:0] chip_in_analog_PAD,
-    inout [7:0] chip_internal,
+    inout chip_out_PAD,
+    inout [15:0] chip_internal,
     inout clk_PAD,
     inout rst_n_PAD
 );
 
-wire [10:0] chip_in;
+wire [7:0] chip_in;
+wire chip_out;
 wire [12:0] chip_in_analog;
 (* keep *)
 wire clk;
@@ -63,21 +65,11 @@ sg13g2_IOPadIn sg13g2_chip_in_7 (
       .p2c(chip_in[7]),
       .pad({chip_in_PAD[7]})
 );
-(* keep *)
-sg13g2_IOPadIn sg13g2_chip_in_8 (
-      .p2c(chip_in[8]),
-      .pad({chip_in_PAD[8]})
-);
-(* keep *)
-sg13g2_IOPadIn sg13g2_chip_in_9 (
-      .p2c(chip_in[9]),
-      .pad({chip_in_PAD[9]})
-);
-(* keep *)
-sg13g2_IOPadIn sg13g2_chip_in_10 (
-      .p2c(chip_in[10]),
-      .pad({chip_in_PAD[10]})
-);
+
+sg13g2_IOPadOut4mA sg13g2_chip_out_0 (
+      .c2p(chip_out),
+      .pad(chip_out_PAD)
+  );
 
 (* keep *)
 sg13g2_IOPadAnalog sg13g2_chip_analog_0 (
@@ -145,20 +137,18 @@ sg13g2_IOPadAnalog sg13g2_chip_analog_12 (
     .padres({chip_in_analog[12]})
 );
 
-(* keep *)
-spi spi_inst(
-    clk,
-    rst_n,
-    chip_in[0],
-    chip_in[1],
-    chip_in[2],
-    chip_in[3],
-    chip_in[4],
-    chip_in[12:5],
-    chip_internal[7:0]
+digital_block digital_block_i(
+    .clk(clk), 
+    .rst(rst_n), 
+    .ss(chip_in[0]), 
+    .mosi(chip_in[1]), 
+    .sck(chip_in[2]),
+    .miso(chip_out),
+    .amux_en(chip_internal[7:0]),
+    .amux_en_neg(chip_internal[15:8]),
+    .sel(chip_in[3]), 
+    .amux_sel(chip_in[4]),
+    .amux_pad_en(chip_in[7:5])
 );
-
-//(* keep *)
-//analog_blockage analog_blockage_I ();
 
 endmodule
