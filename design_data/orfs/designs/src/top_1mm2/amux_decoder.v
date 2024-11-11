@@ -1,4 +1,4 @@
-module decoder(
+module amux_decoder(
     input [2:0] in,
     output reg [7:0] out
 );

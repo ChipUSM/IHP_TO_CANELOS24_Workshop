@@ -3,6 +3,7 @@ export DESIGN_NAME = top_1mm2
 export PLATFORM    = ihp-sg13g2
 
 export VERILOG_FILES =  $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/*.v \
+                        $(DESIGN_HOME)/src/ser_neuron_grid/*.v \
 
 
 

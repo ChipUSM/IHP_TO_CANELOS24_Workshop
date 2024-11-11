@@ -139,7 +139,7 @@ sg13g2_IOPadAnalog sg13g2_chip_analog_12 (
 
 digital_block digital_block_i(
     .clk(clk), 
-    .rst(rst_n), 
+    .rst_neg(rst_n), 
     .ss(chip_in[0]), 
     .mosi(chip_in[1]), 
     .sck(chip_in[2]),

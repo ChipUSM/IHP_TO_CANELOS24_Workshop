@@ -1,11 +1,15 @@
 module digital_block(
-    input clk, rst, ss, mosi, sck,
+    input clk, rst_neg, ss, mosi, sck,
     output miso,
     output [7:0] amux_en,
     output [7:0] amux_en_neg,
     input sel, amux_sel,
     input [2:0] amux_pad_en
 );
+
+
+wire rst;
+assign rst = ~rst_neg;
 
 wire done;
 wire [7:0] din, dout;
@@ -46,13 +50,21 @@ always @(posedge clk) begin
     else if(amux_spi_done) amux_save_spi_en <= amux_spi_out;
 end
 
-decoder decoder_i(amux_pad_en, amux_pad_en_onehot);
+amux_decoder amux_decoder_i(amux_pad_en, amux_pad_en_onehot);
 
 amux_en_sel amux_en_sel_i(
     .sel(amux_sel),
     .spi_en(amux_save_spi_en),
     .pad_en(amux_pad_en_onehot),
     .amux_en(amux_en)
+);
+
+ser_neuron_grid ser_neuron_grid_i(
+    .clk(clk),
+    .rst(rst),
+    .done_iw(neuron_spi_done),
+    .dout_iw(neuron_spi_out),
+    .dout(din)
 );
 
 endmodule
