@@ -1,0 +1,62 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Thu Nov 14 13:38:28 2024
+[*]
+[dumpfile] "/workspaces/usm-vlsi-tools/shared_xserver/IHP_TO_CANELOS24_Workshop/design_data/orfs/designs/results/ser_neuron_grid/ser_neuron_grid.vcd"
+[dumpfile_mtime] "Thu Nov 14 13:32:18 2024"
+[dumpfile_size] 59200969
+[savefile] "/workspaces/usm-vlsi-tools/shared_xserver/IHP_TO_CANELOS24_Workshop/design_data/orfs/designs/results/ser_neuron_grid/ser_neuron_grid_conf.gtkw"
+[timestart] 0
+[size] 1920 1009
+[pos] -35 -35
+*-18.192833 2115535 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] ser_neuron_grid_tb.
+[treeopen] ser_neuron_grid_tb.DUT.
+[sst_width] 214
+[signals_width] 241
+[sst_expanded] 1
+[sst_vpaned_height] 295
+@28
+ser_neuron_grid_tb.clk
+ser_neuron_grid_tb.rst
+ser_neuron_grid_tb.ss
+@22
+ser_neuron_grid_tb.dout_iw[7:0]
+@24
+ser_neuron_grid_tb.dout[7:0]
+@28
+ser_neuron_grid_tb.DUT.spi_controller_instance.set_control
+ser_neuron_grid_tb.DUT.spi_controller_instance.set_data_in
+ser_neuron_grid_tb.DUT.spi_controller_instance.set_din
+ser_neuron_grid_tb.DUT.spi_controller_instance.trig
+@22
+ser_neuron_grid_tb.DUT.registers_inst.win0[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.win1[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.win2[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.win3[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.win4[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.win5[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.win6[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.win7[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.bias0[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.bias1[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.bias2[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.bias3[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.bias4[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.bias5[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.bias6[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.bias7[7:0]
+ser_neuron_grid_tb.DUT.registers_inst.sign[7:0]
+@28
+ser_neuron_grid_tb.DUT.grid_instance.s_dtc_out
+@24
+ser_neuron_grid_tb.DUT.grid_instance.dout0[7:0]
+ser_neuron_grid_tb.DUT.grid_instance.dout1[7:0]
+ser_neuron_grid_tb.DUT.grid_instance.dout2[7:0]
+ser_neuron_grid_tb.DUT.grid_instance.dout3[7:0]
+ser_neuron_grid_tb.DUT.grid_instance.dout4[7:0]
+ser_neuron_grid_tb.DUT.grid_instance.dout5[7:0]
+ser_neuron_grid_tb.DUT.grid_instance.dout6[7:0]
+ser_neuron_grid_tb.DUT.grid_instance.dout7[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
