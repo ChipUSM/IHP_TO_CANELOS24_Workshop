@@ -1,6 +1,7 @@
 module ser_neuron_grid(
   input clk,
   input rst,
+  input ss,
   input done_iw,
   input [7:0] dout_iw,
   output [7:0] dout
@@ -63,8 +64,6 @@ module ser_neuron_grid(
     .dout_spi(dout_spi)
   );
 
-  assign dout = dout_spi;
-
-  //mux output_mux(dout_spi, 8'b11111111, 1'b1, dout);
+  mux output_mux(dout_spi, 8'b11111111, ss, dout);
 
 endmodule
